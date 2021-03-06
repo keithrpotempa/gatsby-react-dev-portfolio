@@ -11,7 +11,7 @@ export const Projects = () => {
   const {
     github: {
       viewer: {
-        repositories: { edges },
+        pinnedItems: { edges },
       },
     },
   } = useStaticQuery(
@@ -19,21 +19,24 @@ export const Projects = () => {
       {
         github {
           viewer {
-            repositories(first: 8, orderBy: { field: STARGAZERS, direction: DESC }) {
+            pinnedItems(first: 10) {
               edges {
                 node {
-                  id
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
-                  languages(first: 3) {
-                    nodes {
-                      id,
-                      name
+                  ... on GitHub_Repository {
+                    id
+                    name
+                    url
+                    description
+                    homepageUrl
+                    stargazers {
+                      totalCount
+                    }
+                    forkCount
+                    languages(first: 3) {
+                      nodes {
+                        id,
+                        name
+                      }
                     }
                   }
                 }
