@@ -14,14 +14,14 @@ export const Intro = () => {
       <Header />
       <IntroWrapper as={Container}>
         <Details theme={theme}>
-          <h1>Hi There!</h1>
-          <h4>I’m John and I’m a JAMStack engineer!</h4>
+          <h1>Keith Potempa</h1>
+          <h4>I'm a full-stack developer building tools to improve lives</h4>
           <Button as={AnchorLink} href="#contact">
             Hire me
           </Button>
         </Details>
         <Thumbnail>
-          <img src={dev} alt="I’m John and I’m a JAMStack engineer!" />
+          <img src="https://res.cloudinary.com/krp/image/upload/v1589980572/keithpotempa.com/Potempa_Keith_browser_oz7n72.jpg" alt="I'm a full-stack developer building tools to improve lives" />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>

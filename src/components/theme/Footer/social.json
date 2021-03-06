@@ -8,19 +8,19 @@
   {
     "id": 1,
     "name": "Github",
-    "link": "https://github.com/smakosh",
+    "link": "https://github.com/keithrpotempa",
     "icon": "/icons/github.svg"
   },
   {
     "id": 2,
-    "name": "StackOverflow",
-    "link": "https://stackoverflow.com/users/story/7396786",
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/keithrpotempa/",
     "icon": "/icons/stackoverflow.svg"
   },
   {
     "id": 3,
     "name": "Twitter",
-    "link": "https://twitter.com/smakosh",
+    "link": "https://twitter.com/keithrpotempa",
     "icon": "/icons/twitter.svg"
   }
 ]
