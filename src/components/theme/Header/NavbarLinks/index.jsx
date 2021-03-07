@@ -11,7 +11,8 @@ const NavbarLinks = ({ desktop }) => {
     <Wrapper desktop={desktop} theme={theme}>
       <AnchorLink href="#about">About</AnchorLink>
       <AnchorLink href="#projects">Projects</AnchorLink>
-      <AnchorLink href="#contact">Contact</AnchorLink>
+      <AnchorLink href="#skills">Skills</AnchorLink>
+      {/* <AnchorLink href="#contact">Contact</AnchorLink> */}
       <ToggleTheme />
     </Wrapper>
   )

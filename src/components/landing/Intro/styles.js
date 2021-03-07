@@ -3,7 +3,7 @@ import overlayIllustration from 'assets/illustrations/overlay.svg';
 
 export const Wrapper = styled.div`
   padding-bottom: 4rem;
-  background-image: url(${overlayIllustration});
+  // background-image: url(${overlayIllustration});
   background-size: contain;
   background-position: right top;
   background-repeat: no-repeat;
@@ -22,9 +22,10 @@ export const IntroWrapper = styled.div`
 
 export const Details = styled.div`
   flex: 1;
+  max-width: 600px;
 
   @media (max-width: 960px) {
-    width: 100%;
+    // width: 100%;
     margin-bottom: 2rem;
   }
 
@@ -55,17 +56,5 @@ export const Details = styled.div`
     @media (max-width: 680px) {
       font-size: 26pt;
     }
-  }
-`;
-
-export const Thumbnail = styled.div`
-  flex: 1;
-
-  @media (max-width: 960px) {
-    width: 100%;
-  }
-
-  img {
-    width: 100%;
   }
 `;

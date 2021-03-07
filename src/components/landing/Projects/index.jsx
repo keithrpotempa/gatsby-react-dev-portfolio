@@ -5,13 +5,16 @@ import { Container, Card, TitleWrap } from 'components/common';
 import Star from 'components/common/Icons/Star';
 import Fork from 'components/common/Icons/Fork';
 import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
+import IconButton from '@material-ui/core/IconButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
 export const Projects = () => {
   const { theme } = useContext(ThemeContext);
   const {
     github: {
       viewer: {
-        repositories: { edges },
+        pinnedItems: { edges },
       },
     },
   } = useStaticQuery(
@@ -19,21 +22,24 @@ export const Projects = () => {
       {
         github {
           viewer {
-            repositories(first: 8, orderBy: { field: STARGAZERS, direction: DESC }) {
+            pinnedItems(first: 10) {
               edges {
                 node {
-                  id
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
-                  languages(first: 3) {
-                    nodes {
-                      id,
-                      name
+                  ... on GitHub_Repository {
+                    id
+                    name
+                    url
+                    description
+                    homepageUrl
+                    stargazers {
+                      totalCount
+                    }
+                    forkCount
+                    languages(first: 3) {
+                      nodes {
+                        id,
+                        name
+                      }
                     }
                   }
                 }
@@ -44,12 +50,13 @@ export const Projects = () => {
       }
     `
   );
+  //as="a" href={node.url} target="_blank" rel="noopener noreferrer"
   return (
     <Wrapper as={Container} id="projects">
       <h2>Projects</h2>
       <Grid>
         {edges.map(({ node }) => (
-          <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
+          <Item key={node.id} theme={theme}>
             <Card theme={theme}>
               <Content>
                 <h4>{node.name}</h4>
@@ -57,14 +64,40 @@ export const Projects = () => {
               </Content>
               <TitleWrap>
                 <Stats theme={theme}>
-                  <div>
+                  <IconButton
+                    variant="contained"
+                    size="large"
+                    color="primary"
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    href={node.url}
+                  >
+                    <FontAwesomeIcon icon={faCodeBranch} size="sm"/>
+                  </IconButton>
+                  {node.homepageUrl
+                    ? (
+                      <IconButton
+                        variant="contained"
+                        size="large"
+                        color="primary"
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        href={node.homepageUrl}
+                      >
+                        <FontAwesomeIcon icon={faPlay} size="sm"/>
+                      </IconButton>
+
+                    )
+                    : null
+                  }
+                  {/* <div>
                     <Star color={theme === "light" ? "#000" : "#fff"} />
                     <span>{node.stargazers.totalCount}</span>
                   </div>
                   <div>
                     <Fork color={theme === "light" ? "#000" : "#fff"} />
                     <span>{node.forkCount}</span>
-                  </div>
+                  </div> */}
                 </Stats>
                 <Stats theme={theme}>
                   <Languages>

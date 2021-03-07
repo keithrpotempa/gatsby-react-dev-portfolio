@@ -4,6 +4,8 @@ import { ThemeContext } from 'providers/ThemeProvider';
 import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Brand } from './styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
@@ -11,7 +13,7 @@ const Navbar = () => {
   return (
     <Wrapper as={Container}>
       <Brand as={Link} to="/" theme={theme}>
-        John Doe
+        {/* <FontAwesomeIcon icon={faHome} size="2x" /> */}
       </Brand>
       <NavbarLinks desktop />
     </Wrapper>
