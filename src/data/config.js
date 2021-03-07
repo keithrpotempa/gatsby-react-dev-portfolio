@@ -1,6 +1,6 @@
 module.exports = {
   defaultTitle: 'Keith Potempa',
-  logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+  logo: '',
   author: 'Keith Potempa',
   url: 'https://keithpotempa.com',
   legalName: 'Keith Potempa',

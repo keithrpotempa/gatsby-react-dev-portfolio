@@ -9,13 +9,22 @@ export const Footer = () => (
       <Details>
         <h2>Keith Potempa</h2>
         <span>
-          © All rights are reserved | {new Date().getFullYear()} | Made with{' '}
-          <span aria-label="love" role="img">
-            💖
-          </span>{' '}
-          by{' '}
-          <a href="https://smakosh.com/?ref=portfolio-dev" rel="noopener noreferrer" target="_blank">
-            Smakosh
+          <span>© All rights are reserved | </span> 
+          <span>{new Date().getFullYear()} | </span>
+          <span><a 
+            href="https://github.com/keithrpotempa/gatsby-react-dev-portfolio" 
+            rel="noopener noreferrer" 
+            target="_blank"
+          >
+            Source Code
+          </a> | </span>
+
+          <a 
+            href="https://www.gatsbyjs.com/starters/smakosh/gatsby-portfolio-dev" 
+            rel="noopener noreferrer" 
+            target="_blank"
+          >
+            Gatsby Starter
           </a>
         </span>
       </Details>

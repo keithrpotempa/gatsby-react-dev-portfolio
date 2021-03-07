@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <Wrapper as={Container}>
       <Brand as={Link} to="/" theme={theme}>
-        <FontAwesomeIcon icon={faHome} size="2x" />
+        {/* <FontAwesomeIcon icon={faHome} size="2x" /> */}
       </Brand>
       <NavbarLinks desktop />
     </Wrapper>

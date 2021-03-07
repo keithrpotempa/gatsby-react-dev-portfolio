@@ -29,7 +29,7 @@ export const Intro = () => {
   const classes = useStyles();
 
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Header />
       <IntroWrapper as={Container}>
         <Details theme={theme}>
