@@ -3,18 +3,18 @@
     "id": 1,
     "name": "GitHub",
     "link": "https://github.com/keithrpotempa",
-    "icon": "github-square"
+    "icon": "github"
   },
   {
     "id": 2,
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/in/keithrpotempa/",
-    "icon": "linkedin"
+    "icon": "linkedin-in"
   },
   {
     "id": 3,
     "name": "Twitter",
     "link": "https://twitter.com/keithrpotempa",
-    "icon": "twitter-square"
+    "icon": "twitter"
   }
 ]
