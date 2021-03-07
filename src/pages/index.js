@@ -12,6 +12,6 @@ export default () => (
     <Intro />
     <Projects />
     <Skills />
-    <Contact />
+    {/* <Contact /> */}
   </Layout>
 );
