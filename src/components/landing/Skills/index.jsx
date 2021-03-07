@@ -1,27 +1,32 @@
-import React, { useContext } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { ThemeContext } from 'providers/ThemeProvider';
-import { Container, Button } from 'components/common';
-import dev from 'assets/illustrations/skills.svg';
-import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import skillList from "./skillList";
+import { SkillListCard } from './skill-list-card';
+import { Grid, Wrapper } from './styles';
+import { Container } from 'components/common';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    paddingLeft: 0,
+    paddingRight: 0,
+  },
+  grid: {
+    marginLeft: "1.2rem",
+  }
+}));
 
 export const Skills = () => {
-  const { theme } = useContext(ThemeContext);
+  const classes = useStyles();
 
   return (
-    <Wrapper id="about">
-      <SkillsWrapper as={Container}>
-        <Details theme={theme}>
-          <h1>Skills</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry’s standard dummy.
-          </p>
-          <Button as={AnchorLink} href="#contact">
-            Hire me
-          </Button>
-        </Details>
-      </SkillsWrapper>
+    <Wrapper as={Container} id="skills">
+      <h2>Skills</h2>
+      <Grid>
+        {Object.keys(skillList).map(listKey => (         
+            <SkillListCard key={listKey} listName={listKey} list={skillList[listKey]} />
+        ))}
+      </Grid>
     </Wrapper>
   );
 };
