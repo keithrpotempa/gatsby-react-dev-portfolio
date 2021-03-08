@@ -25,8 +25,7 @@ export const Details = styled.div`
   max-width: 600px;
 
   @media (max-width: 960px) {
-    // width: 100%;
-    margin-bottom: 2rem;
+    width: 100%;
   }
 
   h1 {

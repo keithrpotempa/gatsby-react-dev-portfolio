@@ -16,7 +16,7 @@ export const Footer = () => (
             rel="noopener noreferrer" 
             target="_blank"
           >
-            Source Code
+            Source
           </a> | </span>
 
           <a 
@@ -24,7 +24,7 @@ export const Footer = () => (
             rel="noopener noreferrer" 
             target="_blank"
           >
-            Gatsby Starter
+            Starter
           </a>
         </span>
       </Details>
