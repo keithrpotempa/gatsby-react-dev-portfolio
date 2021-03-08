@@ -1,37 +1,24 @@
 import React from 'react';
 import social from './social.json';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
-  },
-}));
+import SocialButton from './social-button';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export const Socials = () => {
-	const classes = useStyles();
-	
+	const theme = useTheme();
+	const isSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
+		
 	return (
-	<Box display="flex" flexDirection="row">
-		{social.map(({ id, name, link, icon }) => (
-			<Button 
-				key={id} 
-				href={link} 
-				className={classes.margin}
-				variant="contained"
-				size="large"
-				color="primary"
-				target="_blank" 
-				rel="noopener noreferrer" 
-				aria-label={`follow me on ${name}`}
-			>
-				<FontAwesomeIcon icon={['fab', icon]} size="2x" />
-			</Button>
-		))}
-	</Box>
+		<Box 
+			display="flex" 
+			flexDirection="row" 
+			justifyContent="flex-start" 
+			mb={4}
+		>
+			{social.map(({ id, name, link, icon }) => (
+				<SocialButton key={id} name={name} link={link} icon={icon} isSmallScreen={isSmallScreen}/>
+			))}
+		</Box>
 	)
 }
-

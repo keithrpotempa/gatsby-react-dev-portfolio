@@ -6,10 +6,10 @@ import { Wrapper, IntroWrapper, Details } from './styles';
 import { Socials } from 'components/common/Socials';
 import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
-import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -35,21 +35,9 @@ export const Intro = () => {
         <Details theme={theme}>
           <h1>Keith Potempa</h1>
           <h4>I'm a full-stack developer building tools to improve lives</h4>
-          <Box display="flex" flexDirection="row">
+          <Grid xs={12}>
             <Socials/>
-            <Button
-              variant="contained"
-              size="large"
-              className={classes.margin}
-              color="primary"
-              target="_blank" 
-              rel="noopener noreferrer" 
-              startIcon={<FontAwesomeIcon icon={faFileAlt} size="2x"/>}
-              href="https://res.cloudinary.com/krp/image/upload/v1614724673/keithpotempa.com/Potempa_Dev_Resume_v9.pdf"
-            >
-              Resume
-            </Button>
-          </Box>
+          </Grid>
         </Details>
         <Avatar 
           alt="I'm a full-stack developer building tools to improve lives" 
