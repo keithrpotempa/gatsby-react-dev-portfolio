@@ -5,6 +5,7 @@
   "version": "0.1.2",
   "author": "Smakosh <ismai23l@hotmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.4.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
