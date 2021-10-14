@@ -66,7 +66,6 @@ export const Projects = () => {
                 <Stats theme={theme}>
                   <IconButton
                     variant="contained"
-                    size="large"
                     color="primary"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -77,7 +76,6 @@ export const Projects = () => {
                   {node.homepageUrl ? (
                     <IconButton
                       variant="contained"
-                      size="large"
                       color="primary"
                       target="_blank"
                       rel="noopener noreferrer"

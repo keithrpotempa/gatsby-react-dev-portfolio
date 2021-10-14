@@ -133,7 +133,7 @@ export default {
     },
     {
       name: 'Firebase',
-      icon: 'fire',
+      icon: '',
     },
     {
       name: 'Heroku',
