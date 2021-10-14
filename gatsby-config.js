@@ -11,7 +11,9 @@ module.exports = {
     author: config.author,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-react-helmet',
+    },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
@@ -20,9 +22,15 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-styled-components',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-styled-components',
+    },
+    {
+      resolve: 'gatsby-transformer-sharp',
+    },
+    {
+      resolve: 'gatsby-plugin-sharp',
+    },
     {
       resolve: 'gatsby-source-graphql',
       options: {
@@ -79,7 +87,8 @@ module.exports = {
         icon: './static/favicon/favicon-512.png',
       },
     },
-    'gatsby-plugin-offline',
-    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: 'gatsby-plugin-offline',
+    },
   ],
 };
